@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font Control</title>
+    <style>
+        .text-box { border: 2px solid black; padding: 20px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <div class="text-box" id="text-box">
+        <p>This is a sample paragraph with dynamic font and border color.</p>
+    </div>
+    <label for="rgb">Enter RGB values (e.g., 255,0,0): </label>
+    <input type="text" id="rgb" placeholder="e.g., 255,0,0">
+    <button onclick="changeColor()">Apply Color</button>
+
+    <script>
+        function changeColor() {
+            const rgb = document.getElementById('rgb').value;
+            document.getElementById('text-box').style.color = `rgb(${rgb})`;
+            document.getElementById('text-box').style.borderColor = `rgb(${rgb})`;
+        }
+    </script>
+</body>
+</html>
